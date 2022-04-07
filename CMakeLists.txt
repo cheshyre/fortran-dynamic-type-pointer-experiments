@@ -18,7 +18,7 @@ if(FDTPE_MAIN_PROJECT AND NOT CMAKE_BUILD_TYPE)
 endif()
 
 if(FDTPE_MAIN_PROJECT)
-  add_compile_options("-Wall" "-Wextra" "$<$<CONFIG:RELEASE>:-O3>")
+  add_compile_options("-Wall" "-Wextra" "$<$<CONFIG:RELEASE>:-O3>" "-fsanitize=address")
 endif()
 
 project(FORTRAN_DYNAMIC_TYPE_POINTER_EXPERIMENTS VERSION 0.1.0)

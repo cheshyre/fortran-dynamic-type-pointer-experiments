@@ -1,14 +1,21 @@
 add_library(
     fdtpe_derived_1
     derived_class1.f90
+    derived_class1.h
 )
 target_include_directories(
     fdtpe_derived_1
     PUBLIC
     ${CMAKE_CURRENT_BINARY_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 target_link_libraries(
     fdtpe_derived_1
     PUBLIC
     fdtpe_abstract_base
+)
+set_target_properties(
+    fdtpe_derived_1
+    PROPERTIES
+    POSITION_INDEPENDENT_CODE True
 )

@@ -2,8 +2,19 @@ add_executable(
     advanced_example_fortran
     advanced_example.f90
 )
+add_executable(
+    advanced_example_c
+    advanced_example.c
+)
 target_link_libraries(
     advanced_example_fortran
+    PUBLIC
+    fdtpe_abstract_base
+    fdtpe_derived_1
+    fdtpe_derived_2
+)
+target_link_libraries(
+    advanced_example_c
     PUBLIC
     fdtpe_abstract_base
     fdtpe_derived_1

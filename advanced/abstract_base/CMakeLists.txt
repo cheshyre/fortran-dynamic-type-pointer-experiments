@@ -9,4 +9,15 @@ target_include_directories(
     fdtpe_abstract_base
     PUBLIC
     ${CMAKE_CURRENT_BINARY_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+target_link_libraries(
+    fdtpe_abstract_base
+    PUBLIC
+    -fsanitize=address
+)
+set_target_properties(
+    fdtpe_abstract_base
+    PROPERTIES
+    POSITION_INDEPENDENT_CODE True
 )
