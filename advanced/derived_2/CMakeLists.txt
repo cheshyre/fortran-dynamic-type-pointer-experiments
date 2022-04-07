@@ -1,0 +1,14 @@
+add_library(
+    fdtpe_derived_2
+    derived_class2.f90
+)
+target_include_directories(
+    fdtpe_derived_2
+    PUBLIC
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+target_link_libraries(
+    fdtpe_derived_2
+    PUBLIC
+    fdtpe_abstract_base
+)

@@ -1,0 +1,12 @@
+add_library(
+    fdtpe_abstract_base
+    abc.f90
+    wrapped_abc.f90
+    abc_cptr.f90
+    abc_cptr.h
+)
+target_include_directories(
+    fdtpe_abstract_base
+    PUBLIC
+    ${CMAKE_CURRENT_BINARY_DIR}
+)

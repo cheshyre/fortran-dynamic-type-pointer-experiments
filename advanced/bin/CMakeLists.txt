@@ -1,0 +1,11 @@
+add_executable(
+    advanced_example_fortran
+    advanced_example.f90
+)
+target_link_libraries(
+    advanced_example_fortran
+    PUBLIC
+    fdtpe_abstract_base
+    fdtpe_derived_1
+    fdtpe_derived_2
+)

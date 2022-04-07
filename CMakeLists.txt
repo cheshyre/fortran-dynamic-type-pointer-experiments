@@ -17,8 +17,13 @@ if(FDTPE_MAIN_PROJECT AND NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
+if(FDTPE_MAIN_PROJECT)
+  add_compile_options("-Wall" "-Wextra" "$<$<CONFIG:RELEASE>:-O3>")
+endif()
+
 project(FORTRAN_DYNAMIC_TYPE_POINTER_EXPERIMENTS VERSION 0.1.0)
 
 enable_language(Fortran)
 
 add_subdirectory(basic)
+add_subdirectory(advanced)
